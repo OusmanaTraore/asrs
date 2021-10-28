@@ -1,0 +1,11 @@
+pre {
+    color: aqua;
+    text-align: center;
+}
+
+.date{
+    color: blue;
+    text-transform: capitalize;
+    text-decoration: chartreuse;
+    text-shadow: darkgoldenrod;
+}

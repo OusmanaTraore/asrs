@@ -11,7 +11,7 @@ git init
 #region Commit et push sur Git
 git status
 $fichier = Read-Host "Entrez les fichiers à commiter "
-git add $fichier
+git add --$fichier
 git status
 $commi = Read-Host "Entrez votre commit"
 git status
