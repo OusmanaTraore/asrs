@@ -58,3 +58,7 @@ ol>li::first-letter,ul>li::first-letter{
     text-transform:capitalize;
 
 }
+
+.check{
+    text-align: left;
+}
