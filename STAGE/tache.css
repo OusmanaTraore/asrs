@@ -49,6 +49,9 @@ table {
 .alignement{
     text-align: left;
 }
+.alignement2{
+    text-align: center;
+}
 
 .cap{
     text-transform: uppercase;
