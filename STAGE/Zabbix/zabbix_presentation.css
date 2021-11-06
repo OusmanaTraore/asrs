@@ -17,7 +17,7 @@ ol{
     text-shadow: darkgoldenrod;
 }
 
-
+/* 
 
 table {
     font-family: arial, sans-serif;
@@ -45,12 +45,9 @@ table {
 
   table, th, td {
     border: 1px solid black;
-  }
+  } */
 .alignement{
     text-align: left;
-}
-.alignement2{
-    text-align: center;
 }
 
 .cap{
@@ -62,6 +59,9 @@ ol>li::first-letter,ul>li::first-letter{
 
 }
 
-.check{
-    text-align: left;
+.image{
+    width: 700px;
+    height: 200px;
+    text-align: center;
+    border: 2px blue solid;
 }
