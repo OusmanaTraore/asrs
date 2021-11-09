@@ -22,13 +22,20 @@ class Personne:
         print("Constructeur personne " + nom)
     def SePresenter(self):
         print("Bonjour je m'appelle " + self.nom , "j'ai " + str(self.age) + " ans")
+        if self.EstMajeur():
+            print("Je suis majeur")
+        else:
+            print("Je suis mineur")
 
+    # est Majeur-> True/Fasle 
+    def EstMajeur(self):
+        return self.age >=18 
 
 #--- Utilisation
 personne1 = Personne("Jean",30)  # je crée une personne
-personne2 = Personne("titi",25)  # je crée une personne
+personne2 = Personne("titi",15)  # je crée une personne
 personne1.SePresenter()
 personne2.SePresenter()
 
-personne1.nom ="hgfg"
-print("nom1: " + personne1.nom)
+# print('estMajeur1: ', personne1.EstMajeur())
+# print("nom1: " + personne1.nom)
