@@ -19,11 +19,15 @@ class Personne:
     def __init__(self,nom:str ="" ,age: int=0):
         self.nom = nom   #
         self.age = age   # une variable d'instance : nom
-        if nom =="":
-            self.DemanderNom()
+        self.genre = genre   # une variable d'instance : genre
+        # if nom =="":
+            # self.DemanderNom()
         print("Constructeur personne " + self.nom)
 
     def SePresenter(self):
+        if self.genre:
+            print("Bonjour, je m'appelle " + self.nom+ ",j'ai " + str(self.age) + "ans" )
+            print("Genre : Masculin ")
         info_personne = "Bonjour je m'appelle " + self.nom 
         if self.age != 0:
             info_personne +=  "j'ai " + str(self.age) + " ans"
@@ -42,8 +46,8 @@ class Personne:
     def DemanderNom(self):
         self.nom = input("Nom de la personne nom: ")
 #--- Utilisation
-personne1 = Personne("Jean",30)  # je crée une personne
-personne2 = Personne("titi",15)  # je crée une personne
+# personne1 = Personne("Jean",30)  # je crée une personne
+# personne2 = Personne("titi",15)  # je crée une personne
 
 personne3 = Personne()
 personne4 = Personne()
