@@ -13,7 +13,11 @@ def afficher_information_personne(nom,age):
         print("Vous êtes presque majeur ")
     elif age == 18:
         print("Tous juste majeur: Félicitations ")
-    elif age > 18:
+    elif age > 60:
+        print("Vous êtes sénior ")
+    elif age < 10:
+        print("Vous êtes enfant ")
+    elif age >= 18:
         print("Vous êtes majeur ")
     else:
         print("Vous êtes mineur ")
@@ -33,8 +37,11 @@ def demander_age(nom_personne ):
 # demander le nom 
 
 
-nom1 = demander_nom()
-nom2 = demander_nom()
+# nom1 = demander_nom()
+# nom2 = demander_nom()
+
+nom1 = "personne1"
+nom2 = "personne2"
 
 age1 = demander_age(nom1)
 age2 = demander_age(nom2)
