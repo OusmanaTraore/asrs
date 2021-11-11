@@ -17,14 +17,19 @@ def carre(taille):
         t.left(90)
 
 
+def carres(taille_depart, nb):
+    for  i in range (1, nb+1):
+        taille =  i* taille_depart
+        carre(taille)
+
+
 t = turtle.Turtle()
 
 
 # escalier(60,5)
 
-carre(50)
-carre(100)
-carre(200)
+
+carres(10,10)
 
 
 turtle.done()
