@@ -10,7 +10,11 @@ def afficher_information_personne(nom,age):
     print("L'an prochain vous aurez " + str(age + 1) + " ans")
 
     if age == 17:
-        print("Vous êtes presque majeur ")
+        print("Vous êtes presque majeur ") 
+    elif  age ==1 or age ==2:
+        print("Vous êtes bébé ")
+    elif 12 <= age < 18:
+        print("Vous êtes adolescent ")
     elif age == 18:
         print("Tous juste majeur: Félicitations ")
     elif age > 60:
