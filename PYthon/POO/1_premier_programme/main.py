@@ -4,11 +4,16 @@ def demander_nom():
         reponse_nom = input("Quel est votre nom ? ")
     return reponse_nom
 
+def afficher_information_personne(nom,age):
+    print("Vous vous appelez " + nom + ", vous avez " + str(age) + " ans")
+    print("L'an prochain vous aurez " + str(age + 1) + " ans")
 
-def demander_age():
+
+
+def demander_age(nom_personne ):
     age_int = 0
     while age_int == 0:
-        age_str = input("Quel est votre age ? ")
+        age_str = input(nom_personne + " ,quel est votre age ? ")
         try: 
             age_int = int(age_str)
         except:
@@ -18,8 +23,12 @@ def demander_age():
 # demander le nom 
 
 
-nom = demander_nom()
-age = demander_age()
+nom1 = demander_nom()
+nom2 = demander_nom()
 
-print("Vous vous appelez " + nom + ", vous avez " + str(age) + " ans")
-print("L'an prochain vous aurez " + str(age + 1) + " ans")
+age1 = demander_age(nom1)
+age2 = demander_age(nom2)
+
+afficher_information_personne(nom1,age1)
+afficher_information_personne(nom2,age2)
+
