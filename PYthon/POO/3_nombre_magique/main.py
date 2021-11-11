@@ -22,17 +22,18 @@ NOMBRE_MAX = 10
 NOMBRE_MAGIC = random.randint(NOMBRE_MIN,NOMBRE_MAX)
 NB_VIES = 4 
 
-nombre=0
-vies = NB_VIES  
+gagne = False
 
 # le nombre magic est plus petit
-while not nombre == NOMBRE_MAGIC and vies >0 :
+for i in range(0, NB_VIES) :
+    vies = NB_VIES -i  
     print (f" Vous avez { vies } vies !")
     nombre = demander_nombre(NOMBRE_MIN, NOMBRE_MAX)
 
     if nombre == NOMBRE_MAGIC:
         print("Bravo , vous avez trouvé le nombre magic !!!!")
-        print(f"Le nombre magique etait: {NOMBRE_MAGIC}")
+        gagne = True
+        break
     elif nombre < NOMBRE_MAGIC:
         print("le nombre magic est plus grand")
         vies -= 1
@@ -40,6 +41,27 @@ while not nombre == NOMBRE_MAGIC and vies >0 :
         print("le nombre magic est plus petit")
         vies -= 1
 
-if vies == 0:
+if not gagne:
     print("Vous avez perdu !")
     print(f"Le nombre magique etait: {NOMBRE_MAGIC}")
+# nombre=0
+# vies = NB_VIES  
+
+# # le nombre magic est plus petit
+# while not nombre == NOMBRE_MAGIC and vies >0 :
+#     print (f" Vous avez { vies } vies !")
+#     nombre = demander_nombre(NOMBRE_MIN, NOMBRE_MAX)
+
+#     if nombre == NOMBRE_MAGIC:
+#         print("Bravo , vous avez trouvé le nombre magic !!!!")
+#         print(f"Le nombre magique etait: {NOMBRE_MAGIC}")
+#     elif nombre < NOMBRE_MAGIC:
+#         print("le nombre magic est plus grand")
+#         vies -= 1
+#     else:
+#         print("le nombre magic est plus petit")
+#         vies -= 1
+
+# if vies == 0:
+#     print("Vous avez perdu !")
+#     print(f"Le nombre magique etait: {NOMBRE_MAGIC}")
