@@ -5,8 +5,18 @@ def demander_nom():
     return reponse_nom
 
 def afficher_information_personne(nom,age):
+    print()
     print("Vous vous appelez " + nom + ", vous avez " + str(age) + " ans")
     print("L'an prochain vous aurez " + str(age + 1) + " ans")
+
+    if age == 17:
+        print("Vous êtes presque majeur ")
+    elif age == 18:
+        print("Tous juste majeur: Félicitations ")
+    elif age > 18:
+        print("Vous êtes majeur ")
+    else:
+        print("Vous êtes mineur ")
 
 
 
