@@ -45,3 +45,10 @@ body {
       page-break-after: always;
     }
   }
+
+  .date{
+    color: blue;
+    text-transform: capitalize;
+    text-decoration: chartreuse;
+    text-shadow: darkgoldenrod;
+}
