@@ -10,6 +10,7 @@ https://www.zabbix.com/documentation/5.0/fr/manual/installation/requirements
 
 Config personnnelle au niveau des VM
 ![image](https://user-images.githubusercontent.com/60136087/146181516-f928c649-5e36-4915-be7b-9b6415747209.png)
+![image](https://user-images.githubusercontent.com/60136087/146181629-37788520-f485-49d8-b835-dee3fc97e78f.png)
 
 
 # Lien officiel pour l'installation de Zabbix
