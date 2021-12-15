@@ -40,10 +40,7 @@ https://www.zabbix.com/download?zabbix=5.0&os_distribution=ubuntu&os_version=20.
  sudo systemctl restart zabbix-server.service
  ```
  
-* ETAPE 2 (Zabbix front end) Dans la barre du navigateur executer http:<votre adresse IP>/zabbix
-  Sur l'interface 
-* f
-* 
+
 
 # Installation de l'agent zabbix
 https://www.zabbix.com/download_agents?version=5.0+LTS&release=5.0.17&os=Linux&os_version=4.12&hardware=ppc64le&encryption=No+encryption&packaging=Archive&show_legacy=0
