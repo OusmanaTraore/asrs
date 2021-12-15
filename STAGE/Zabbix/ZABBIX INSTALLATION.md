@@ -39,7 +39,9 @@ https://www.zabbix.com/download?zabbix=5.0&os_distribution=ubuntu&os_version=20.
  ```
  sudo systemctl restart zabbix-server.service
  ```
- 
+* ETAPE 2 (Zabbix Front end http://adresseIP/zabbix)
+ |Utilisateur|Admin|
+ |Password|zabbix|
 
 
 # Installation de l'agent zabbix
