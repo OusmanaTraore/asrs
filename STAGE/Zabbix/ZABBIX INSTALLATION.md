@@ -1,8 +1,8 @@
 #Requirements
+https://www.zabbix.com/documentation/5.0/fr/manual/installation/requirements
+
 ![image](https://user-images.githubusercontent.com/60136087/146181058-cad902b2-d47c-44f7-9f06-6b03102d733b.png)
 
-
-https://www.zabbix.com/documentation/5.0/fr/manual/installation/requirements
 
 # Lien officiel pour l'installation de Zabbix
 https://www.zabbix.com/download?zabbix=5.0&os_distribution=ubuntu&os_version=20.04_focal&db=mysql&ws=apache
