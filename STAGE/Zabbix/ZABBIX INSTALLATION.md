@@ -3,6 +3,14 @@ https://www.zabbix.com/documentation/5.0/fr/manual/installation/requirements
 
 ![image](https://user-images.githubusercontent.com/60136087/146181058-cad902b2-d47c-44f7-9f06-6b03102d733b.png)
 
+![image](https://user-images.githubusercontent.com/60136087/146181292-16a5498b-30b1-4616-8fa6-fe4f2f1cf341.png)
+
+![image](https://user-images.githubusercontent.com/60136087/146181366-5d5b534f-8027-4977-80b4-949f93184f01.png)
+
+
+Config personnnelle au niveau des VM
+![image](https://user-images.githubusercontent.com/60136087/146181516-f928c649-5e36-4915-be7b-9b6415747209.png)
+
 
 # Lien officiel pour l'installation de Zabbix
 https://www.zabbix.com/download?zabbix=5.0&os_distribution=ubuntu&os_version=20.04_focal&db=mysql&ws=apache
