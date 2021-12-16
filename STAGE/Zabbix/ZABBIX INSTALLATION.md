@@ -45,7 +45,7 @@ https://www.zabbix.com/download?zabbix=5.0&os_distribution=ubuntu&os_version=20.
 | ----------- | -----  |
 |  Password   | zabbix | 
 
-# Installation de zabbix-proxy sur le même serveur que zabbix
+# Installation de zabbix-proxy sur le même serveur que zabbix (serveur de monitoring)
 ![image](https://user-images.githubusercontent.com/60136087/146201826-db1888aa-1f9a-444f-aaff-4b084a616b91.png)
  
  * ETAPE 1 Création d'une database propre à zabbix proxy
@@ -74,10 +74,34 @@ https://www.zabbix.com/download?zabbix=5.0&os_distribution=ubuntu&os_version=20.
  ```
  sudo systemctl start zabbix-agent
  ```
-# Installation de l'agent zabbix
+# Installation de l'agent zabbix (machine à monitorée)
 https://www.zabbix.com/download_agents?version=5.0+LTS&release=5.0.17&os=Linux&os_version=4.12&hardware=ppc64le&encryption=No+encryption&packaging=Archive&show_legacy=0
 
 ![image](https://user-images.githubusercontent.com/60136087/146176761-1654a251-0e92-430d-9335-2fa91d64957c.png)
 
 ![image](https://user-images.githubusercontent.com/60136087/146176857-cdf44185-c339-4db0-bbf8-252e0404efdb.png)
 
+ * Etape 1 (après télechargement  du fichier tar.gz) décompresser le fichier
+ ```
+ wget https://cdn.zabbix.com/zabbix/binaries/stable/5.0/5.0.17/zabbix_agent-5.0.17-linux-4.12-ppc64le-static.tar.gz
+ 
+ tar -xzvf ~/zabbix_agent-5.0.17-linux-4.12-ppc64le-static.tar.gz
+ 
+ ```
+  * Etape 2 (éditer le fichier /etc/zabbix/zabbix_agentd.conf
+ ```
+ Server=<adresse IP du serveur Zabbix>
+ Hostname=<le nom de votre machine affiché via "hostname">
+ ServerActive=<adresse IP du serveur Zabbix>
+ 
+ ```
+ enregistrer et quitter
+ * Etape 3 (redémarrer l'agent )
+  ```
+  sudo systemctl restart zabbix-agent
+  
+  ou
+  sudo systemctl restart zabbix-agent.service
+ 
+ ```
+ 
