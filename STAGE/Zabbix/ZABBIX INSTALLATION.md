@@ -45,6 +45,35 @@ https://www.zabbix.com/download?zabbix=5.0&os_distribution=ubuntu&os_version=20.
 | ----------- | -----  |
 |  Password   | zabbix | 
 
+# Installation de zabbix-proxy sur le même serveur que zabbix
+![image](https://user-images.githubusercontent.com/60136087/146201826-db1888aa-1f9a-444f-aaff-4b084a616b91.png)
+ 
+ * ETAPE 1 Création d'une database propre à zabbix proxy
+ ```
+  mysql
+  create database zabbix_proxy character set utf8 collate utf8_bin;
+  grant all privileges on zabbix_proxy.* to zabbix@localhost;
+  quit;
+ ```
+ 
+![image](https://user-images.githubusercontent.com/60136087/146204900-82d2c8f7-d1c3-4bff-852a-44b05e0da4ed.png)
+  
+ * ETAPE 2 Peuplement de la database
+ ```
+ cd /usr/share/doc/zabbix-proxy-mysql/
+ zcat schema.sql.gz | mysql zabbix_proxy 
+ ```
+ * Etape 3 (configuration du fichier /etc/zabbix/zabbix_proxy
+ ```
+ DBName=zabbix_proxy
+ DBUser=zabbix
+ DBPassword=<mot de passe de la base de donnée utilisé lors de la création avec mysql>
+ ListenPort=10055
+ ```
+ * Etape 4 (Démarrage de l'agent zabbix)
+ ```
+ sudo systemctl start zabbix-agent
+ ```
 # Installation de l'agent zabbix
 https://www.zabbix.com/download_agents?version=5.0+LTS&release=5.0.17&os=Linux&os_version=4.12&hardware=ppc64le&encryption=No+encryption&packaging=Archive&show_legacy=0
 
