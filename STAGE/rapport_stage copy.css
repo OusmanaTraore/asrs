@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+    font: 12pt "Tahoma";
+  }
+  
+  * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  }
+  
+ 
+  
+
+  
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  .sommaire{
+    color: black;
+  }
+
+  
+  @media print {
+    .page {
+      margin: 0;
+      border: initial;
+      border-radius: initial;
+      width: initial;
+      min-height: initial;
+      box-shadow: initial;
+      background: initial;
+      page-break-after: always;
+    }
+  }
+
+  .date{
+    color: blue;
+    text-transform: capitalize;
+    text-decoration: chartreuse;
+    text-shadow: darkgoldenrod;
+}
+#fond{
+background-image: url("./images/Capture.PNG");
+background-size: 100px 80px;
+background-position: center center ;
+background-repeat: no-repeat;
+padding: 15px;
+}
+
+.img_centree{
+  text-align: center;
+}
+
+p{
+  text-align: justify;
+}
+
+.pad {
+  margin-left: 20% ;
+  margin-right: 20% ;
+  height: 5px;
+  background-color: black;
+  /* color: black; */
+  
+}
+a {
+  text-decoration: none;
+}
+a:hover{
+  color: rgb(64, 226, 43);
+  background-color: black;
+}
+
+
+li{
+  line-height:15px;
+ 
+}

@@ -1,88 +1,82 @@
 body {
+  background: rgb(204,204,204); 
+}
+page[size="A4"] {
+  background: white;
+  width: 21cm;
+  height: 29.7cm;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+}
+@media print {
+  body, page[size="A4"] {
     margin: 0;
-    padding: 0;
-    background-color: #FAFAFA;
-    font: 12pt "Tahoma";
+    box-shadow: 1;
   }
-  
-  * {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-  }
-  
-  .page {
-    width: 21cm;
-    min-height: 29.7cm;
-    padding: 1cm;
-    margin: 0.5cm auto;
-    border: 2px black solid;
-    border-radius: 5px;
-    background: white;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .subpage {
-    padding: 0.5cm;
-    border: 2px blue solid;
-    height: 280mm;
-    /* outline: 0.5cm #FFEAEA solid; */
-  }
-  
-  @page {
-    size: A4;
-    margin: 0;
-  }
-  .sommaire{
-    color: black;
-  }
-
-  
-  @media print {
-    .page {
-      margin: 0;
-      border: initial;
-      border-radius: initial;
-      width: initial;
-      min-height: initial;
-      box-shadow: initial;
-      background: initial;
-      page-break-after: always;
-    }
-  }
-
-  .date{
-    color: blue;
-    text-transform: capitalize;
-    text-decoration: chartreuse;
-    text-shadow: darkgoldenrod;
-}
-#fond{
-background-image: url("./images/Capture.PNG");
-background-size: 100px 80px;
-background-position: center center ;
-background-repeat: no-repeat;
-padding: 15px;
 }
 
-p{
-  text-align: justify;
+.page_div {
+    
+  /* width: 21cm; */
+  /* min-height: 29.7cm; */
+  padding: 0;
+  margin: 0. auto;
+  border: 2px black solid;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
-
-.pad {
-  margin-left: 20% ;
-  margin-right: 20% ;
-  height: 5px;
-  background-color: black;
-  /* color: black; */
-  
-}
-a {
-  text-decoration: none;
-}
-a:hover{
-  color: rgb(64, 226, 43);
-  background-color: black;
+.subpage {
+  padding: 0.5cm;
+  border: 2px blue solid;
+  height: 280mm;
+  /* outline: 0.5cm #FFEAEA solid; */
 }
 .num{
   text-align: center;
 }
+.sommaire{
+  color: black;
+}
+#fond{
+  background-image: url("./images/Capture.PNG");
+  background-size: 100px 80px;
+  background-position: center center ;
+  background-repeat: no-repeat;
+  padding: 15px;
+  }
+  
+  .img_centree{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+  }
+  
+  p{
+    text-align: justify;
+  }
+  
+  .pad {
+    margin-left: 20% ;
+    margin-right: 20% ;
+    height: 5px;
+    background-color: black;
+    /* color: black; */
+    
+  }
+  a {
+    text-decoration: none;
+  }
+  a:hover{
+    color: rgb(64, 226, 43);
+    background-color: black;
+  }
+  
+  
+  li{
+    line-height:15px;
+   
+  }
