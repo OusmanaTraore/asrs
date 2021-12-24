@@ -1,5 +1,5 @@
 body {
-  background: rgb(204,204,204); 
+  background: white;
 }
 page[size="A4"] {
   background: white;
@@ -7,8 +7,10 @@ page[size="A4"] {
   height: 29.7cm;
   display: block;
   margin: 0 auto;
+  /* page-break-before: always;  */
+  page-break-after: always;
   margin-bottom: 0.5cm;
-  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+  /* box-shadow: 0 0 0.5cm rgba(50,20,20,0.5); */
 }
 @media print {
   body, page[size="A4"] {
@@ -19,33 +21,54 @@ page[size="A4"] {
 
 .page_div {
     
-  /* width: 21cm; */
-  /* min-height: 29.7cm; */
+  width: 21cm; 
+  height: 29.7cm;
   padding: 0;
-  margin: 0. auto;
-  border: 2px black solid;
-  border-radius: 5px;
-  background: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
+  /* page-break-before: always; 
+  page-break-after: always; */
+  margin: 0. auto; 
+  /* border: 2px black solid;  */
+   /* border-radius: 5px; */
+   background: white;
+   /* box-shadow: 0 0 2px rgba(240, 23, 23, 0.1); */
+ }
+ 
 .subpage {
-  padding: 0.5cm;
-  border: 2px blue solid;
-  height: 280mm;
+  /* padding: 0.5cm; */
+  height: 28.7cm;
+  border: 2px white solid;
+  /* height: 282mm; */
   /* outline: 0.5cm #FFEAEA solid; */
 }
 .num{
   text-align: center;
+  background-position: center bottom;
 }
 .sommaire{
   color: black;
 }
-#fond{
-  background-image: url("./images/Capture.PNG");
-  background-size: 100px 80px;
-  background-position: center center ;
+
+/* .fond1{
+  background-image: url("/Zabbix/rapport_pictures/logo_iprec.png");
+  background-size: 200px 80px;
+  background-position: right bottom ;
   background-repeat: no-repeat;
   padding: 15px;
+  } 
+#fond2{
+  background-image: url("./Zabbix/rapport_pictures/afapark.PNG");
+  background-size: 200 80px;
+  background-position: left bottom ;
+  background-repeat: no-repeat;
+  padding: 15px;
+  }  */
+.fond{
+
+    background-image: url("/Zabbix/rapport_pictures/logo_iprec.png"), url("./Zabbix/rapport_pictures/afapark.PNG");
+    background-position: right bottom, left bottom;
+    background-size: 200px 80px;
+    background-repeat: no-repeat;
+    padding: 15px;
   }
   
   .img_centree{
@@ -64,7 +87,7 @@ page[size="A4"] {
     margin-right: 20% ;
     height: 5px;
     background-color: black;
-    /* color: black; */
+    border: 1px black solid;
     
   }
   a {
