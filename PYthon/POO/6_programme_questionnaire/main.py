@@ -82,9 +82,9 @@ def afficher_table_addiion(n):
     for i in range(1,10):
         print (i, "+", n , "=", i+n)'''
 
-def afficher_table(n, operateur_str, operation_cbk):
-    for i in range(1,10):
-        print (i, operateur_str, n , "=",  operation_cbk(i,n))
+# def afficher_table(n, operateur_str, operation_cbk):
+#     for i in range(1,10):
+#         print (i, operateur_str, n , "=",  operation_cbk(i,n))
 
 
 # def mult_callback(a,b):
@@ -109,11 +109,11 @@ def afficher_table(n, operateur_str, operation_cbk):
 #         resultat += n
 #     return 
     
-def somme(titre ,**nombres):
-    print("TITRE:", titre)
-    resultat = 0
-    for n in nombres.values():
-        resultat += n
-    return resultat
+# def somme(titre ,**nombres):
+#     print("TITRE:", titre)
+#     resultat = 0
+#     for n in nombres.values():
+#         resultat += n
+#     return resultat
 
-print(somme("somme des points",maths= 50, angl=2, esp=54))
+# print(somme("somme des points",maths= 50, angl=2, esp=54))
