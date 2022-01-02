@@ -1,0 +1,39 @@
+INTEGER: int
+VARCHAR: str
+
+artiste
+- artiste_id
+- nom
+
+
+album
+- album_id
+- artiste_id
+- titre
+- annee_de_sortie
+
+
+CREATE TABLE artiste (
+    artiste_id INTEGER NOT NULL PRIMARY KEY,
+    nom VARCHAR
+);
+
+CREATE TABLE album (
+    album_id INTEGER NOT NULL PRIMARY KEY,
+    artiste_id INTEGER REFERENCES artiste,
+    titre VARCHAR,
+    annee_de_sortie INTEGER
+);
+
+INSERT INTO artiste (nom) VALUES ("MICHAEL JACKSON");
+INSERT INTO  album (titre, annee_de_sortie) VALUES("Thriller);
+
+UPDATE album SET annee_de_sortie = 1982 WHERE titre = "Thriller";
+
+DELETE FROM artiste WHERE nom = "Madona"
+
+
+
+SELECT * FROM artiste
+SELECT nom FROM artiste
+SELECT * FROM album WHERE annee_de_sortie > 1990;
