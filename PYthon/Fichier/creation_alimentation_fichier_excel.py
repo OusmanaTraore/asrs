@@ -40,9 +40,16 @@ for  i in donnees.items():
         sheet.cell(row,2+j).value = ventes[j]
     row +=1
 
+#Début  Ajout du graphique
+chart_ref=openpyxl.chart.Reference(sheet, min_col=2, min_row=2, max_col=sheet.max_column,max_row=2)
+chart_serie= openpyxl.chart.Series(chart_ref, title="Total ventes £")
+chart = openpyxl.chart.BarChart()
+chart.title = "Evolution du prix des pommes"
+chart.append(chart_serie)
+
+sheet.add_chart(chart, "F2")
+# Fin ajout graphique
 wb_sortie.save("total_ventes_trimestre.xlsx")
-
-
 
 
 
