@@ -10,3 +10,5 @@ fichier_zip.close()"""
 
 
 shutil.make_archive("total_ventes_trimestre" , "zip" , "ventes")
+
+shutil.unpack_archive("fichiers_excel2.zip"  , "ventes_zip")
