@@ -34,10 +34,10 @@ def socket_receive_all_data(socket_p, data_len):
         # print("total len : ", current_data_len, "/", data_len)
     return total_data
 
-def socket_send_command_and_receive_all_data(socket_p, commande):
-    if not  commande :
+def socket_send_command_and_receive_all_data(socket_p, command):
+    if not  command :
         return None
-    socket_p.sendall(commande.encode())
+    socket_p.sendall(command.encode())
     
     header_data= socket_receive_all_data(socket_p,13)
     longueur_data = int(header_data.decode())
@@ -56,6 +56,8 @@ print (f"Attente de connexion sur {HOST_IP}, port {HOST_PORT}...")
 connection_socket, client_address = s.accept()
 print(f"Connexion établie avec {client_address}")
 
+dl_filename = None
+
 ### Envoi de données
 while True:
     # ... infos
@@ -64,10 +66,25 @@ while True:
         break
     commande = input(client_address[0]+":"+str(client_address[1])+" " + infos_data.decode() + " >")
 
+    commande_split= commande.split(" ")
+    if len(commande_split) ==2  and commande_split[0] =="dl":
+        dl_filename = commande_split[1]
+
     data_recues = socket_send_command_and_receive_all_data(connection_socket,commande)
     if not data_recues:
         break
-    print( data_recues.decode())
+
+    if dl_filename:
+        if len(data_recues)== 1 and data_recues == b"":
+            print("ERREUR: Le fichier", dl_filename, "n'existe pas")
+        else:
+            f = open(dl_filename, "wb")
+            f.write(data_recues)
+            f.close()
+            print("Fichier", dl_filename, "téléchargé.")
+        dl_filename = None
+    else:
+        print( data_recues.decode())
 
 
 s.close()

