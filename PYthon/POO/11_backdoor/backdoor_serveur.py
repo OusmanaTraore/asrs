@@ -6,9 +6,45 @@
 # close
 
 import socket 
+import platform 
+
+print(platform.platform())
+
 HOST_IP="127.0.0.1"
 HOST_PORT= 32500
 MAX_DATA_SIZE= 1024
+
+def socket_receive_all_data(socket_p, data_len):
+    current_data_len=0
+    total_data = None
+    # print("socket_receive_all_data len : ", data_len)
+    while current_data_len < data_len:
+        chunk_len= data_len - current_data_len
+        if chunk_len > MAX_DATA_SIZE:
+            chunk_len = MAX_DATA_SIZE
+        data = socket_p.recv(chunk_len)
+        # print(" len:" , len(data))
+        if not data:
+            return None
+        if not total_data:
+            total_data = data
+        else:
+            total_data += data
+        current_data_len += len(data)
+        # print("total len : ", current_data_len, "/", data_len)
+    return total_data
+
+def socket_send_command_and_receive_all_data(socket_p, command):
+    if not  commande :
+        return None
+    connection_socket.sendall(commande.encode())
+    
+    header_data= socket_receive_all_data(connection_socket,13)
+    longueur_data = int(header_data.decode())
+
+    data_recues = socket_receive_all_data(connection_socket,longueur_data)
+    return data_recues
+
 
 s = socket.socket()
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR,1)
@@ -22,11 +58,19 @@ print(f"Connexion établie avec {client_address}")
 
 ### Envoi de données
 while True:
-    commande = input("Commande: ")
+    # ... infos
+    infos_data=socket_send_command_and_receive_all_data(connection_socket, "infos")
+    if not infos_data:
+        break
+    commande = input(infos_data.decode() + " >")
     if commande == "":
         continue
     connection_socket.sendall(commande.encode())
-    data_recues = connection_socket.recv(MAX_DATA_SIZE)
+    
+    header_data= socket_receive_all_data(connection_socket,13)
+    longueur_data = int(header_data.decode())
+
+    data_recues = socket_receive_all_data(connection_socket,longueur_data)
     if not data_recues:
         break
     print( data_recues.decode())
