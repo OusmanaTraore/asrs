@@ -34,15 +34,15 @@ def socket_receive_all_data(socket_p, data_len):
         # print("total len : ", current_data_len, "/", data_len)
     return total_data
 
-def socket_send_command_and_receive_all_data(socket_p, command):
+def socket_send_command_and_receive_all_data(socket_p, commande):
     if not  commande :
         return None
-    connection_socket.sendall(commande.encode())
+    socket_p.sendall(commande.encode())
     
-    header_data= socket_receive_all_data(connection_socket,13)
+    header_data= socket_receive_all_data(socket_p,13)
     longueur_data = int(header_data.decode())
 
-    data_recues = socket_receive_all_data(connection_socket,longueur_data)
+    data_recues = socket_receive_all_data(socket_p,longueur_data)
     return data_recues
 
 
@@ -62,19 +62,13 @@ while True:
     infos_data=socket_send_command_and_receive_all_data(connection_socket, "infos")
     if not infos_data:
         break
-    commande = input(infos_data.decode() + " >")
-    if commande == "":
-        continue
-    connection_socket.sendall(commande.encode())
-    
-    header_data= socket_receive_all_data(connection_socket,13)
-    longueur_data = int(header_data.decode())
+    commande = input(client_address[0]+":"+str(client_address[1])+" " + infos_data.decode() + " >")
 
-    data_recues = socket_receive_all_data(connection_socket,longueur_data)
+    data_recues = socket_send_command_and_receive_all_data(connection_socket,commande)
     if not data_recues:
         break
     print( data_recues.decode())
 
 
 s.close()
-connection_socket.close()
+connection_socket.close() 
