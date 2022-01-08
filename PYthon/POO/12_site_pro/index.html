@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ousmana Traoré</title>
+    <style>
+        body{
+            margin:0;
+            font-family: Arial;
+        }
+
+        div.cover{
+            background: url(cover_overlay.png) no-repeat center/100% 100%, url(cover.jpg) no-repeat center/cover;
+            height:360px;
+            position: relative;
+        }
+        img.cover-profile{
+            height: 100px;
+            position: relative;
+            left:50%;
+            margin-left: -50px;
+            margin-top: 50px;
+        }
+        h1{
+            color:white;
+            text-align: center;
+        }
+        div.cover p {
+            color: lightgray;
+            text-align: center;
+        }
+        div.cover-contact{
+            background-color: red;
+            position: absolute;
+            top:10px;
+            left: 10px;
+            border-left: 4px solid #D89584;
+            padding-left: 8px;
+        }
+        div.cover-contact p {
+            text-align: left;
+        }
+        div.cover-contact * {
+            color: white;
+            font-size: 14px;
+        }
+        a.contact-button{
+            color:#D89584;
+            border:3px solid #D89584;
+            padding:8px 20px;
+            text-decoration:none;
+            background-color: #00000040;
+            display: inline-block;
+            margin-top: 15px;
+            text-transform: uppercase;
+        }
+        a.contact-button:hover{
+            color: white;
+            border: 3px solid white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cover">
+        <img src="profile.png"  class="cover-profile">
+        <h1> Ousmana Traoré</h1>
+        <p>Développeur Freelance | Web app / WebMobile</p>
+        <div style="text-align: center;">
+            <a class=contact-button href="mailto:oussouburgos@gmail.com?subject=Contact%20pour%20plus%20d'%20informations">me contacter</a>
+        </div>
+        <div class="cover-contact">
+            <p><a href="mailto:oussouburgos@gmail.com?subject=Contact%20pour%20plus%20d'%20informations">mon_email@gmail.com</a></p>
+            <p>
+                <a href="tel:+33695843492">06 95 84 34 92</a>
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
