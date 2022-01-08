@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ousmana Traoré</title>
     <style>
+        :root{
+            --color1:#D89584
+        }
         body{
             margin:0;
             font-family: Arial;
@@ -30,30 +33,38 @@
         div.cover p {
             color: lightgray;
             text-align: center;
+            margin-top: 8px;
+            font-size: 14px;
         }
         div.cover-contact{
-            background-color: red;
+            /* background-color: red; */
             position: absolute;
-            top:10px;
+            top:20px;
             left: 10px;
-            border-left: 4px solid #D89584;
+            border-left: 4px solid var(--color1);
             padding-left: 8px;
         }
         div.cover-contact p {
             text-align: left;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        div.cover-contact p:first-child{
+            margin-bottom: 14px;
         }
         div.cover-contact * {
             color: white;
             font-size: 14px;
         }
         a.contact-button{
-            color:#D89584;
-            border:3px solid #D89584;
+            color:var(--color1);
+            border:3px solid var(--color1);
             padding:8px 20px;
             text-decoration:none;
             background-color: #00000040;
             display: inline-block;
-            margin-top: 15px;
+            margin-top: 18px;
+            font-size: 14px;
             text-transform: uppercase;
         }
         a.contact-button:hover{
