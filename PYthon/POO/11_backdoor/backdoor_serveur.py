@@ -10,7 +10,7 @@ import platform
 
 print(platform.platform())
 
-HOST_IP="127.0.0.1"
+HOST_IP=""
 HOST_PORT= 32500
 MAX_DATA_SIZE= 1024
 
