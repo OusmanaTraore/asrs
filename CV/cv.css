@@ -1,0 +1,140 @@
+*{
+    overflow: auto;
+}
+.page {
+    width: 21cm;
+    min-height: 29.7cm;
+    padding: 0.2cm;
+    margin: 0.5cm auto;
+    border: 2px black solid;
+    border-radius: 5px;
+    /* background: blue; */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  
+  @media print {
+    .page {
+      margin: 0;
+      border: initial;
+      border-radius: initial;
+      width: initial;
+      min-height: initial;
+      box-shadow: initial;
+      background: initial;
+      page-break-after: always;
+    }
+  }
+
+
+  div.left-side{
+      background-color: rgba(0, 0, 0, 0.1) ;
+      width: 26%;
+      height: 1240px;
+      display: inline-block;
+      text-align:center;
+      text-transform:capitalize;
+      padding-top: 5px;
+    
+     
+  }
+
+  div.right-side{
+      background-color: blueviolet;
+      width: 74%;
+      height: 1240px;
+      float:right;
+  }
+
+  div.profil-header{
+      /* background-color: blue; */
+      height:auto;
+      text-align:center;
+      /* color: rgba(255,255, 255, 1); */
+      
+  }
+  div.profil-header img{
+    height: 80px;
+    border-radius: 50%;
+    border:2px solid rgba(91, 209, 238, 1);
+    outline-style: outset;
+    outline-color: rgb(255, 255, 255,0.8);
+    
+}
+    
+p.header , p.title{
+    border: 1px solid black;
+    margin-left: 2px;
+    margin-right: 2px;
+    outline-style: double;
+    /* box-shadow: 10px blanchedalmond ; */
+} 
+.title{
+    outline-style: double;
+    text-align: center;
+}
+/* table.title{
+    text-decoration: underline;
+} */
+  div.profil-coordonnees{
+      text-transform: none;
+      display: block;
+      overflow:auto;
+      font-size: 12px;
+      margin-top: 15px;
+  }
+  div.profil-competences{
+      text-transform: none;
+      display: block;
+      overflow:auto;
+      font-size: 8px;
+      margin-top: 3px;
+  }
+  .competences td {
+    border:  1px solid rgba(0, 0, 0);
+    /* border-collapse: collapse; */
+  }
+  .competences tr:nth-child(odd){
+      background-color: rgba(91, 209, 238, 1);
+  }
+  .competences tr:nth-child(1){
+    background-color: rgba(0,0,0,0.1);
+}
+  div.profil-centre-dinterets{
+      text-align: center;
+      text-transform: none;
+      display: block;
+      overflow:auto;
+      font-size: 8px;
+  } 
+.centre-dinterets {
+    text-align: center;
+    display: inline;
+    margin-top: 5px;
+    padding-top: 15px;
+}
+.centre-dinterets td:nth-child(odd){
+    background-color: rgba(0,0,0,0.1);
+    border:  1px solid rgba(0,0,0,0.5);
+}
+
+  div.presentation{
+      background-color: blue;
+      height:25px;
+  }
+  div.experiences{
+      background-color: green;
+      height:25px;
+  }
+  div.formation{
+      background-color: yellow;
+      height:25px;
+  }
+  div.langues{
+      background-color: pink;
+      height:25px;
+  }
