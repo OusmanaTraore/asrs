@@ -8,7 +8,6 @@
     margin: 0.5cm auto;
     border: 2px black solid;
     border-radius: 5px;
-    /* background: blue; */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
   
@@ -33,70 +32,85 @@
 
   div.left-side{
       background-color: rgba(0, 0, 0, 0.1) ;
-      width: 26%;
-      height: 1240px;
+      width: 24%;
+      height: 1100px;
       display: inline-block;
       text-align:center;
       text-transform:capitalize;
-      padding-top: 5px;
+      padding-top: 3px;
+      margin-top: 3px;
+      border-top-left-radius:12px;
+      border-bottom-left-radius:12px;
+      
     
      
   }
 
   div.right-side{
-      background-color: blueviolet;
-      width: 74%;
-      height: 1240px;
+      width: 76%;
+      height: 1100px;
+      overflow: auto;
       float:right;
+      padding-top: 3px;
+      margin-top: 3px;
+      
   }
 
   div.profil-header{
-      /* background-color: blue; */
       height:auto;
       text-align:center;
-      /* color: rgba(255,255, 255, 1); */
-      
-  }
-  div.profil-header img{
-    height: 80px;
+      margin-bottom: 15px;
+    }
+    div.profil-header img{
+    height: 100px;
     border-radius: 50%;
     border:2px solid rgba(91, 209, 238, 1);
     outline-style: outset;
     outline-color: rgb(255, 255, 255,0.8);
-    
+    margin-top:15px;
+    margin-bottom: 15px;
 }
     
-p.header , p.title{
-    border: 1px solid black;
-    margin-left: 2px;
-    margin-right: 2px;
-    outline-style: double;
-    /* box-shadow: 10px blanchedalmond ; */
-} 
-.title{
-    outline-style: double;
+p.title{
+    margin-left: auto;
+    margin-right: auto;
+    outline-style: outset;
+    outline-color: rgb(255, 255, 255,0.8);
+    margin-top:15px;
+    margin-bottom: 15px;
+    width: fit-content;
     text-align: center;
-}
-/* table.title{
-    text-decoration: underline;
-} */
+
+    
+} 
+p.header {
+  margin-left: auto;
+  margin-right: auto;
+  outline-color: rgb(255, 255, 255,0.8);
+  margin-top:15px;
+  margin-bottom: 15px;
+  width: fit-content;
+  text-align: center;
+} 
+
   div.profil-coordonnees{
       text-transform: none;
       display: block;
       overflow:auto;
       font-size: 12px;
-      margin-top: 15px;
+      margin-top:15px;
+      margin-bottom: 15px;
   }
   div.profil-competences{
       text-transform: none;
       display: block;
       overflow:auto;
       font-size: 8px;
-      margin-top: 3px;
+      margin-top:15px;
+      margin-bottom: 15px;
   }
   .competences td {
     border:  1px solid rgba(0, 0, 0);
-    /* border-collapse: collapse; */
   }
   .competences tr:nth-child(odd){
       background-color: rgba(91, 209, 238, 1);
@@ -122,19 +136,176 @@ p.header , p.title{
     border:  1px solid rgba(0,0,0,0.5);
 }
 
+.norm{
+ /* background-color: white; */
+ font-size: 15px;
+ margin-top: 3px;
+}
   div.presentation{
-      background-color: blue;
-      height:25px;
-  }
-  div.experiences{
-      background-color: green;
-      height:25px;
-  }
+      text-align: center;
+      margin-top:10px;
+      margin-left:5px;
+      margin-right: 5px;
+    }
+    div.experiences{
+        text-align: center;
+        margin-left:5px;
+
+        margin-right: 5px;
+        overflow:hidden;
+        margin-top: -25px;
+        margin-bottom: -15px;   
+    }
+    p.experience-title{
+        font-weight: bold;
+        text-align: left;
+        margin-left: 10px;
+        padding-left: 5px;
+        padding-right: 10px;
+        width: fit-content;
+        border-style: outset;
+        margin-top: -12px;
+        margin-bottom: 10px; 
+    }
+    
+    p.date{
+        text-align: left;
+        margin-left: 5px;
+        padding-left: 2px;
+        float: left;
+        border-left: solid 2px black;
+        
+        background-color: gray;
+        color: honeydew;
+        
+        border-right: solid 2px black;
+        border-top: solid 2px rgb(124, 184, 233);
+        border-width: 3px;
+        border-top-width: 5px;
+        border-bottom: solid 2px black;
+        width: fit-content;
+    }
+    p.projet{
+        text-align: left;
+        margin-left: 18px;
+        margin-bottom: -1px;
+        margin-top: -6px;
+}
+p.snd2{
+    text-align: left;
+    margin-top: 10px;
+    padding-left: 5px;
+}
+p.snd{
+  text-align: left;
+  margin-top: 20px;
+  padding-left: 5px;
+}
+.top{
+  margin-top: -13px;
+}
+.top2{
+  margin-top: -17px;
+}
+.top3{
+  margin-top: 5px;
+}
+.top4{
+  margin-top: -25px;
+}
+
   div.formation{
-      background-color: yellow;
-      height:25px;
+    margin-top: -25px;
+    margin-bottom: -25px;
   }
   div.langues{
       background-color: pink;
-      height:25px;
   }
+
+  .separation{
+      height: 1px;
+      width: 45%;
+      margin-left:auto ;
+      margin-right: auto;
+      background-color: black;
+  }
+  .titre{
+      background-color: rgb(0,0,0,0.1);
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+  }
+
+  .principal{
+      margin-bottom: 0px;
+  }
+  .button {
+    background-color: gray;
+    color: gold;
+    border: none;
+     padding: 5px 8px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 12px;
+     margin-top: -1px;
+     margin-left: 2px;
+     font-weight: bold;
+     cursor: pointer;
+     border-radius: 8px;
+   }
+   .button3 {
+    background-color: gray;
+    color: gold;
+    border: none;
+     padding: 5px 8px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 12px;
+     margin-top: -5px;
+     margin-left: 2px;
+     font-weight: bold;
+     cursor: pointer;
+     border-radius: 8px;
+     overflow: hidden;
+     
+   }
+   .button4 {
+    background-color: rgba(202, 215, 218, 0.8);
+    color: rgb(17, 16, 8);
+    border: none;
+     padding: 5px 8px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     outline-style: outset;
+     outline-color: rgb(122, 41, 9);
+     font-size: 12px;
+     margin-top: 0px;
+     margin-bottom: 0px;
+     margin-left: 2px;
+     font-weight: bold;
+     cursor: pointer;
+     border-radius: 8px;
+   }
+   .langue{
+     color: blue;
+   }
+   .button2 {
+    background-color: gray;
+    color: gold;
+    border: none;
+     padding: 3px 6px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 12px;
+     margin-top: -2px;
+     margin-bottom: 1px;
+     margin-left: 2px;
+     font-weight: bold;
+     cursor: pointer;
+     border-radius: 8px;
+     border-style: outset;
+   }
