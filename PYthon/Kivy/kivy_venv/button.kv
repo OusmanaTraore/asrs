@@ -36,6 +36,10 @@ WidgetsExemple:
         orientation: 'vertical'
         disabled: not mon_switch.active
 
-    Label:
-        text: str(int(mon_slider.value))
-        #text: root.slider_value_txt
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: str(int(mon_slider.value))
+        ProgressBar:
+            max: 100
+            value: mon_slider.value
