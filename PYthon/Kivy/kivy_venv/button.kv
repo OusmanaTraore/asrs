@@ -2,7 +2,7 @@ WidgetsExemple:
 
 <WidgetsExemple>:
     cols: 3
-
+# première ligne  
     ToggleButton:
         text: "OFF"
         on_state: root.on_toggle_button_state(self)
@@ -13,8 +13,29 @@ WidgetsExemple:
         text: "Compter"
         on_press: root.on_button_click()
         disabled: not root.compteur_actif
+
     Label:
         text: root.mon_texte
         font_name: "fonts/Lcd.ttf"
         font_size: "80dp"
         color : 1, 0.5, 1, 1
+# deuxième ligne    
+    Switch:
+        id : mon_switch
+        on_active: root.on_switch_active(self)
+        size_hint: None, 1
+        width: "100dp" 
+        active: True
+
+    Slider:
+        id: mon_slider
+        min: 0
+        max : 100
+        value: 50
+        #on_value: root.on_slider_value(self)
+        orientation: 'vertical'
+        disabled: not mon_switch.active
+
+    Label:
+        text: str(int(mon_slider.value))
+        #text: root.slider_value_txt
