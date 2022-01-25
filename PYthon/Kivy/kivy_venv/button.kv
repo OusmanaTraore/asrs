@@ -1,5 +1,6 @@
 WidgetsExemple:
 
+
 <WidgetsExemple>:
     cols: 3
 # première ligne  
@@ -43,3 +44,13 @@ WidgetsExemple:
         ProgressBar:
             max: 100
             value: mon_slider.value
+    
+    TextInput:
+        id: my_text_input
+        size_hint: None, 1
+        width: "100dp"
+        text: "toto"
+        multiline: False
+        on_text_validate: root.on_text_validate(self)
+    Label:
+        text: "Vous êtes : " + root.text_input_str
