@@ -150,11 +150,11 @@ p.header {
     div.experiences{
         text-align: center;
         margin-left:5px;
-
         margin-right: 5px;
         overflow:hidden;
         margin-top: -25px;
         margin-bottom: -15px;   
+        /* background-color: aqua; */
     }
     p.experience-title{
         font-weight: bold;
@@ -234,6 +234,8 @@ p.snd{
       text-align: center;
       text-transform: uppercase;
       font-weight: bold;
+      margin-top: 6px;
+      /* background-color: yellow; */
   }
 
   .principal{
@@ -263,7 +265,7 @@ p.snd{
      text-decoration: none;
      display: inline-block;
      font-size: 12px;
-     margin-top: -5px;
+     margin-top: 2px;
      margin-left: 2px;
      font-weight: bold;
      cursor: pointer;

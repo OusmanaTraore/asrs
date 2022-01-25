@@ -11,6 +11,19 @@ body{
     font-family: Arial;
     line-height: 1.5;
 }
+ div.cover img , div.frame img{
+    height: 100px;
+    border-radius: 50%;
+    border:2px solid rgba(91, 209, 238, 1);
+    outline-style: outset;
+    outline-color: rgb(255, 255, 255,0.8);
+    margin-top:15px;
+    margin-bottom: 15px;
+}
+.col-contenu img:nth-child(1){
+    height: 20px;
+    width:250px;
+}
 
 iframe{
     width:100%;
